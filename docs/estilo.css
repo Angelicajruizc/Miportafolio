@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Laila&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
 .info-personal, .tecnologias, .contact-form {
-  background-image: url("/IMG/hoja-holo-2.jpg");
+  background-image: url("/docs/hoja-holo-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
@@ -34,7 +34,8 @@ body {
 
 h1 {
   font-family: "Rambla", sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin: 7px;
   line-height: 15px;
   text-shadow: 2px 2px 1px #081749;
   color: #ffffff;
@@ -42,24 +43,28 @@ h1 {
 
 h2 {
   font-family: "Laila", sans-serif;
-  color: #5e6997;
-  margin: 0;
+  color: #765075;
+  margin-top: 22px;
+  font-weight: lighter;
+  line-height: 30px;
   font-size: 1.7rem;
   text-shadow: #ffffff -1px 2px 1px;
 }
 
 h3 {
-  font-family: "Rambla", sans-serif;
+  font-family: "Laila", sans-serif;
   color: #081749;
-  margin: 0;
-  padding-bottom: 5px;
+  margin: 2px;
+  line-height: 15px;
+  padding-bottom: 12px;
   font-size: 1.5rem;
 }
 
 p {
   color: #ffffff;
   font-family: "Yusei Magic", sans-serif;
-  line-height: 18px;
+  line-height: 20px;
+  letter-spacing: 0.02rem;
   margin: 0;
   font-size: 0.9rem;
 }
@@ -75,8 +80,8 @@ p {
   display: grid;
   -ms-grid-columns: 210px 120px;
       grid-template-columns: 210px 120px;
-  -ms-grid-rows: 35px 200px 210px 170px 9% 10% 300px 26% 100px 50px;
-      grid-template-rows: 35px 200px 210px 170px 9% 10% 300px 26% 100px 50px;
+  -ms-grid-rows: 35px 200px 175px 190px 8.5% 9% 310px 24% 100px 50px;
+      grid-template-rows: 35px 200px 175px 190px 8.5% 9% 310px 24% 100px 50px;
       grid-template-areas: "nav nav" "header header" "perfil perfil" "info-p info-p" "hobbies hobbies" "tecno tecno" "expe expe" "contacto contacto" "redes redes" "footer footer";
 }
 
@@ -105,14 +110,18 @@ p {
   grid-area: header;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-image: url("/IMG/hoja-holo.jpg");
+  background-image: url("/docs/hoja-holo.jpg");
   background-size: 100%;
   background-position: left top;
   background-repeat: no-repeat;
-  padding: 20px;
+  text-align: right;
+  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-flow: row-reverse wrap;
@@ -120,11 +129,11 @@ p {
 }
 
 .encabezado .photo {
-  width: 100px;
-  height: 100px;
+  width: 92px;
+  height: 108px;
   border-radius: 10px;
   border: solid 2px #ffe0d1;
-  margin-right: 50px;
+  margin: 18px 20px 0 0;
 }
 
 .perfil {
@@ -145,7 +154,7 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: info-p;
-  padding: 15px 25px;
+  padding: 20px 25px;
 }
 
 .info-personal p {
@@ -159,7 +168,7 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: hobbies;
-  padding: 20px 30px 20px 20px;
+  padding: 20px;
 }
 
 .tecnologias {
@@ -167,7 +176,7 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: tecno;
-  background-image: url("/IMG/hoja-holo.jpg");
+  background-image: url("/docs/hoja-holo.jpg");
   background-size: 100%;
   background-position: left top;
   background-repeat: no-repeat;
@@ -200,8 +209,22 @@ p {
           align-items: center;
 }
 
+.tecnologias .fa-html5:hover, .tecnologias .fa-sass:hover, .tecnologias .fa-bootstrap:hover {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tecnologias .fa-css3:hover, .tecnologias .fa-git:hover {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 .tecnologias h3 {
-  padding-right: 150px;
+  padding-right: 120px;
 }
 
 .experiencia {
@@ -224,7 +247,7 @@ p {
   transition: opacity .5s;
   position: absolute;
   left: 55px;
-  top: 55px;
+  top: 60px;
   background-color: #ffe0d1;
   border-radius: 10px;
   list-style: none;
@@ -252,7 +275,7 @@ p {
   height: 20px;
   position: absolute;
   padding: 0;
-  top: 39vh;
+  top: 43vh;
   left: 55px;
 }
 
@@ -275,9 +298,10 @@ p {
   text-decoration: none;
   font-family: "Laila", sans-serif;
   color: #081749;
+  line-height: 10px;
   background-clip: inherit;
-  background-color: #765075a2;
-  border-radius: 5px;
+  background-color: #ffe0d1;
+  border-radius: 6px;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -287,6 +311,7 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: contacto;
+  padding: 20px;
 }
 
 .redes {
@@ -294,6 +319,29 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: redes;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.redes .fab:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+.redes h3 {
+  padding: 0 80px 5px 80px;
+  text-align: center;
 }
 
 footer {
@@ -302,6 +350,15 @@ footer {
   -ms-grid-column-span: 2;
   grid-area: footer;
   background-color: #ffe0d1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .grid-container .menu-h {
@@ -367,8 +424,8 @@ footer {
   top: 26px;
   left: -15px;
   margin: 0px;
-  padding: 15px;
-  background-color: #b691b0;
+  padding: 17px;
+  background-image: linear-gradient(45deg, #b691b0 0%, #765075 100%);
   display: none;
   list-style-type: none;
   z-index: 5;
@@ -377,17 +434,19 @@ footer {
 #links-menu li a {
   display: block;
   font-size: 1.2rem;
-  font-family: "Yusei Magic", sans-serif;
+  font-family: "Laila", sans-serif;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   padding: 6px;
-  color: #081749;
-  text-shadow: #ffffff 0px 2px 1px;
+  color: #ffffff;
+  text-shadow: #081749 0px 2px 1px;
 }
 
 #links-menu li a:hover {
   background-color: #ffe0d1;
   font-weight: bold;
+  text-shadow: #ffffff 0px 2px 1px;
+  color: #081749;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
