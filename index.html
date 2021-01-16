@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Angelica Ruiz</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="nav-menu">
+            <nav class="menu-h"> <!--Inicio del menu hamburguesa-->
+                <input type="checkbox" id="desplegable"/>
+                <ul id="links-menu">
+                    <li><a href="#Sobre-mi">Sobre mi</a></li>
+                    <li><a href="#Conocimientos">Conocimientos</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul>
+                <label for="desplegable">
+                    <span class="linea-menu"></span>
+                    <span class="linea-menu"></span>
+                    <span class="linea-menu"></span>
+                </label>
+            </nav>
+        </div> <!--Fin del menu hamburguesa--> 
+        <header class="encabezado">                             
+            <h1>Angélica Ruíz</h1>
+            <h2>Full Stack<br> Developer</h2>
+            <img class="photo" src="/IMG/Angelica.jpg" alt="Angelica">        
+        </header>
+        <section class="perfil" id="Sobre-mi">
+            <h3>Perfil</h3>
+            <p>Después de estudiar psicología, trabajar en RRHH, vivir un tiempo en Alemania y viajar, he decidido sumergirme en el mundo de la programación. <br>Ahora estudio en<span style="font-weight: bold;"><a title="Ir a Acamica" target="_blank" href="https://www.acamica.com/desarrollo-web-full-stack">Acámica</a></span>, y aunque no ha sido fácil, me gusta este reto.<br>Te invito a conocer más de mi...👍🏻</p> 
+        </section>
+        <section class="info-personal">
+            <p>&nbsp;Edad: 30</p><br><p>&nbsp;&nbsp;&nbsp;Nacionalidad: Colombiana</p><br><p>&nbsp;&nbsp;&nbsp;&nbsp;Ciudad actual: Bogotá</p><br><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Experiencia: hasta ahora arranco</p><br><p>&nbsp;&nbsp;&nbsp;&nbsp;Estado civil: soltera</p><br><p>&nbsp;&nbsp;&nbsp;Fecha de nacimiento: 24/Oct</p><br><p>&nbsp;Hijos: No están en mis planes</p>
+        </section>
+        <section class="hobbies">
+            <h3>...Un poco más...</h3>
+            <p>Hablo alemán - Soy fan del ejercicio<br>
+                Amo bailar - Viajo cada vez que puedo <br>
+                Amante del sushi, café, tequila y queso<br>
+                Para leer: ¡Todo lo que sea de suspenso!</p>
+        </section>
+        <section class="tecnologias" id="Conocimientos">
+            <h3>Tecnologías</h3>
+            <div><span class="fab fa-html5 fa-3x" style="color: #ffff;"></span></div>
+            <div><span class="fab fa-css3 fa-3x" style="color: #ffff;"></span></div>
+            <div><span class="fab fa-sass fa-3x" style="color: #ffff;"></span></div>
+            <div><span class="fab fa-git fa-3x" style="color: #ffff;"></span></div>
+            <div><span class="fab fa-bootstrap fa-3x" style="color: #ffff;"></span></div>
+        </section>
+        <section class="experiencia" id="Proyectos">
+            <h3>Mis proyectos</h3>
+            <ul class="project">
+                <li id="proj-1"><img src="/IMG/PodcastC.png" width="185" height="180" alt="Podcast-channel"></li>
+                <li id="proj-2"><img src="/IMG/paint-face.jpg" alt="Face-paint" width="185" height="180"></li>
+                <li id="proj-3"><img src="/IMG/cactus.jpg" alt="Cactus" width="185" height="180"></li>
+                <li id="proj-4"><img src="/IMG/pixel-colors.jpg" alt="Colors" width="185" height="180"></li>
+            </ul>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#proj-1">N°1</a></li>
+                    <li><a href="#proj-2">N°2</a></li>
+                    <li><a href="#proj-3">N°3</a></li>
+                    <li><a href="#proj-4">N°4</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="contact-form" id="Contacto">
+            <h3>Contáctame</h3>
+            <div class="formulario">
+                <form action="">
+                    <fieldset>
+                        <input type="text" name="nombre" required placeholder="Nombre y Apellido" tabindex="0">
+                        <label for="nombre"></label>                        
+                    </fieldset>
+                    <fieldset>
+                        <input type="email" name="email" required placeholder="E-mail" tabindex="0">
+                        <label for="email"></label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="tel" name="telefono" required placeholder="Teléfono" tabindex="0">
+                        <label for="telefono"></label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="comentario">¿Algún comentario?</label>
+                        <textarea name="comentario" placeholder="Si deseas, puedes dejar un breve comentario" cols="30" rows="10" maxlength="150" tabindex="0"></textarea>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <label for="enviar"></label>
+                        <input type="submit" value="Enviar">                      
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section class="redes">
+            <h3>Mis redes</h3>
+        </section>
+        <footer>
+            <p>© 2021 by Angélica Ruíz</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
