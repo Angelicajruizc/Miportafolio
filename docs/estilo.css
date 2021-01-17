@@ -55,9 +55,11 @@ h3 {
   font-family: "Laila", sans-serif;
   color: #081749;
   margin: 2px;
+  letter-spacing: 2px;
   line-height: 15px;
+  text-shadow: #ffffff -1px 1px 1px;
   padding-bottom: 12px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 p {
@@ -66,7 +68,7 @@ p {
   line-height: 20px;
   letter-spacing: 0.02rem;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .grid-container {
@@ -80,8 +82,8 @@ p {
   display: grid;
   -ms-grid-columns: 210px 120px;
       grid-template-columns: 210px 120px;
-  -ms-grid-rows: 40px 200px 175px 195px 8.5% 9% 310px 24% 100px 50px;
-      grid-template-rows: 40px 200px 175px 195px 8.5% 9% 310px 24% 100px 50px;
+  -ms-grid-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
+      grid-template-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
       grid-template-areas: "nav nav" "header header" "perfil perfil" "info-p info-p" "hobbies hobbies" "tecno tecno" "expe expe" "contacto contacto" "redes redes" "footer footer";
 }
 
@@ -168,7 +170,7 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: hobbies;
-  padding: 20px;
+  padding: 20px 5px 20px 20px;
 }
 
 .tecnologias {
@@ -224,7 +226,7 @@ p {
 }
 
 .tecnologias h3 {
-  padding-right: 120px;
+  padding-right: 80px;
 }
 
 .experiencia {
@@ -275,7 +277,7 @@ p {
   height: 20px;
   position: absolute;
   padding: 0;
-  top: 43vh;
+  top: 245px;
   left: 55px;
 }
 
@@ -315,24 +317,25 @@ p {
 }
 
 .contact-form .formulario form {
-  max-width: 240px;
+  max-width: 255px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: #765075a2;
   font-family: "Yusei Magic", sans-serif;
   color: #ffffff;
+  padding: 5px;
   margin: auto;
 }
 
 .contact-form input, .contact-form label {
   font-family: "Yusei Magic", sans-serif;
-  margin: 3px 15px;
+  margin: 4px 15px;
   padding: 5px;
 }
 
 .contact-form input[type="text"], .contact-form [type="email"], .contact-form [type="tel"] {
-  max-width: 230px;
+  width: 215px;
   height: 24px;
   background: #ffffffc2;
   border: none;
@@ -344,6 +347,25 @@ p {
 
 .contact-form input[type="text"]:focus, .contact-form input[type="text"]:active, .contact-form [type="email"]:focus, .contact-form [type="email"]:active, .contact-form [type="tel"]:focus, .contact-form [type="tel"]:active {
   background-color: #ffffff;
+  -webkit-box-shadow: 0 0 1px 1.5px #ffe0d1;
+          box-shadow: 0 0 1px 1.5px #ffe0d1;
+}
+
+.contact-form #comentario {
+  width: 215px;
+  background: #ffffffc2;
+  border: none;
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+  font-size: 14px;
+  margin: 4px 15px;
+}
+
+.contact-form #comentario:focus, .contact-form #comentario:active {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 1px 1.5px #ffe0d1;
+          box-shadow: 0 0 1px 1.5px #ffe0d1;
 }
 
 .contact-form input[type="submit"] {
@@ -362,23 +384,10 @@ p {
 .contact-form input[type="submit"]:hover, .contact-form input[type="submit"]:active {
   background-color: #ffe0d1;
   color: #765075;
+  -webkit-box-shadow: 0 0 1px 1.5px #ffe0d1;
+          box-shadow: 0 0 1px 1.5px #ffe0d1;
   -webkit-animation-name: shake;
           animation-name: shake;
-}
-
-.contact-form #comentario {
-  max-width: 205px;
-  background: #ffffffc2;
-  border: none;
-  border-radius: 10px;
-  padding-left: 15px;
-  outline: none;
-  font-size: 14px;
-  margin-left: 15px;
-}
-
-.contact-form #comentario:focus, .contact-form #comentario:active {
-  background-color: #ffffff;
 }
 
 .redes {
@@ -407,7 +416,7 @@ p {
 }
 
 .redes h3 {
-  padding: 0 86px 5px 80px;
+  padding: 0 75px 5px 70px;
 }
 
 footer {

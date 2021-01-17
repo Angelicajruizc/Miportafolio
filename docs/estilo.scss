@@ -48,16 +48,18 @@ h3 {
   font-family: $font-famy-h3;
   color: $color-h3;
   margin: 2px;
+  letter-spacing: 2px;
   line-height: 15px;
+  text-shadow: #ffffff -1px 1px 1px;
   padding-bottom: 12px;
-  font-size: 1.5rem;}
+  font-size: 1.6rem;}
 p {
   color: $color-p;
   font-family: $font-famy-p;
   line-height: 20px;
   letter-spacing: 0.02rem;
   margin: 0;
-  font-size: 0.9rem;}
+  font-size: 1rem;}
 
 .grid-container {
     max-width: 330px;
@@ -66,7 +68,7 @@ p {
     margin: auto;
     display: grid;
     grid-template-columns: 210px 120px;
-    grid-template-rows: 40px 200px 175px 195px 8.5% 9% 310px 24% 100px 50px;
+    grid-template-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
     grid-template-areas: "nav nav"
                          "header header"
                          "perfil perfil"
@@ -132,7 +134,7 @@ padding: 20px 30px 20px 20px;
 
 .hobbies {
     grid-area: hobbies;
-    padding: 20px;}
+    padding: 20px 5px 20px 20px;}
 
 .tecnologias {
   grid-area: tecno;
@@ -160,7 +162,7 @@ padding: 20px 30px 20px 20px;
       transform: rotate(15deg);
       transition: all 0.5 linear;}
   
-      h3 {padding-right: 120px;}}
+      h3 {padding-right: 80px;}}
 
 .experiencia {
     grid-area: expe;
@@ -193,7 +195,7 @@ padding: 20px 30px 20px 20px;
         height: 20px;
         position: absolute;
         padding: 0;
-        top: 43vh;   
+        top: 245px;   
         left: 55px;
         
         ul {
@@ -215,33 +217,48 @@ padding: 20px 30px 20px 20px;
           font-size: 1rem;}}}
 
 .contact-form {
-    grid-area: contacto;
+  grid-area: contacto;
   padding: 20px;
 
     .formulario form {
-      max-width: 240px;
+      max-width: 255px;
       height: fit-content;
       background-color: #765075a2;
       font-family: $font-famy-p;
       color: $color-p;
+      padding: 5px;
       margin: auto;}
     
     input, label {
       font-family: $font-famy-p;
-    margin: 3px 15px;
-  padding: 5px ;}
+      margin: 4px 15px;
+      padding: 5px ;}
 
-  input[type="text"], [type="email"], [type="tel"] {
-    max-width: 230px;
-    height: 24px;
-    background: #ffffffc2;
-    border: none;
-    border-radius: 10px;
-    padding-left: 15px;
-    outline: none;
-    font-size: 14px;
-  &:focus, &:active {
-    background-color: #ffffff;}} 
+    input[type="text"], [type="email"], [type="tel"] {
+      width: 215px;
+      height: 24px;
+      background: #ffffffc2;
+      border: none;
+      border-radius: 10px;
+      padding-left: 15px;
+      outline: none;
+      font-size: 14px;
+        &:focus, &:active {
+          background-color: #ffffff;
+          box-shadow: 0 0 1px 1.5px $background-rosa;}} 
+
+    #comentario {
+      width: 215px;
+      background: #ffffffc2;
+      border: none;
+      border-radius: 10px;
+      padding-left: 15px;
+      outline: none;
+      font-size: 14px; 
+      margin: 4px 15px;;
+      &:focus, &:active {
+        background-color: #ffffff;
+        box-shadow: 0 0 1px 1.5px $background-rosa;}}
 
     input[type="submit"] {
       width: 100px;
@@ -254,23 +271,11 @@ padding: 20px 30px 20px 20px;
       font-family: $font-famy-p;
       background-color: #742071;
       color: $color-p;
-      &:hover, &:active {
-        background-color: $background-rosa;
-        color: $color-h2;
-        animation-name: shake;}}
-    
-    #comentario {
-    max-width: 205px;
-    background: #ffffffc2;
-    border: none;
-    border-radius: 10px;
-    padding-left: 15px;
-    outline: none;
-    font-size: 14px; 
-    margin-left: 15px;
-    &:focus, &:active {
-      background-color: #ffffff;}}
-  }
+        &:hover, &:active {
+          background-color: $background-rosa;
+          color: $color-h2;
+          box-shadow: 0 0 1px 1.5px $background-rosa;
+          animation-name: shake;}}}
 
 
 .redes {
@@ -279,12 +284,12 @@ padding: 20px 30px 20px 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-     
+
     .fab:hover {
       transform: scale(1.5);
       transition: all 1.3s ease;}
     h3 {
-      padding: 0 86px 5px 80px;}}
+      padding: 0 75px 5px 70px;}}
 
 footer {
     grid-area: footer;
