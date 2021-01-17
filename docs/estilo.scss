@@ -64,12 +64,12 @@ p {
 .grid-container {
     max-width: 330px;
     width: 100%;
-    height:fit-content;
+    height: 296vh;
     margin: auto;
-    display: grid;
     overflow: hidden;
+    display: grid;
     grid-template-columns: 210px 120px;
-    grid-template-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
+    grid-template-rows: 40px 200px 175px 195px 8.5% 8.5% 310px 23% 95px 70px;
     grid-template-areas: "nav nav"
                          "header header"
                          "perfil perfil"
@@ -135,7 +135,7 @@ padding: 20px 30px 20px 20px;
 
 .hobbies {
     grid-area: hobbies;
-    padding: 20px 5px 20px 20px;}
+    padding: 20px;}
 
 .tecnologias {
   grid-area: tecno;
@@ -173,8 +173,7 @@ padding: 20px 30px 20px 20px;
 .experiencia {
     grid-area: expe;
     position:relative;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 20px;
   
   ul.project li {
       width: 220px;
@@ -271,7 +270,7 @@ padding: 20px 30px 20px 20px;
       height: 26px;
       padding: 0px 8px 3px 8px;
       border-radius: 10px;
-      margin: 2px 65px;
+      margin: 2px 70px;
       border: none;
       outline: none;
       font-family: $font-famy-p;
@@ -342,7 +341,7 @@ footer {
   #links-menu {
     width: 180px;
     height: 200px;
-    position: absolute; top: -169px; left: -195px;
+    position: absolute; top: 31px; left: -195px;
     margin: 0px;
     padding: 17px;
     background-image: linear-gradient(45deg, $background-lila 0%, #765075 100%);
@@ -379,7 +378,7 @@ footer {
       from {
     transform: translate(0, 0);}
       to {
-    transform: translate(100%, 100%);}
+    transform: translate(100%, 0);}
       }
 
     @keyframes scale1 {

@@ -74,17 +74,15 @@ p {
 .grid-container {
   max-width: 330px;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 296vh;
   margin: auto;
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
-  overflow: hidden;
   -ms-grid-columns: 210px 120px;
       grid-template-columns: 210px 120px;
-  -ms-grid-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
-      grid-template-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
+  -ms-grid-rows: 40px 200px 175px 195px 8.5% 8.5% 310px 23% 95px 70px;
+      grid-template-rows: 40px 200px 175px 195px 8.5% 8.5% 310px 23% 95px 70px;
       grid-template-areas: "nav nav" "header header" "perfil perfil" "info-p info-p" "hobbies hobbies" "tecno tecno" "expe expe" "contacto contacto" "redes redes" "footer footer";
 }
 
@@ -171,7 +169,7 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: hobbies;
-  padding: 20px 5px 20px 20px;
+  padding: 20px;
 }
 
 .tecnologias {
@@ -248,8 +246,7 @@ p {
   -ms-grid-column-span: 2;
   grid-area: expe;
   position: relative;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .experiencia ul.project li {
@@ -386,7 +383,7 @@ p {
   height: 26px;
   padding: 0px 8px 3px 8px;
   border-radius: 10px;
-  margin: 2px 65px;
+  margin: 2px 70px;
   border: none;
   outline: none;
   font-family: "Yusei Magic", sans-serif;
@@ -508,7 +505,7 @@ footer {
   width: 180px;
   height: 200px;
   position: absolute;
-  top: -169px;
+  top: 31px;
   left: -195px;
   margin: 0px;
   padding: 17px;
@@ -559,8 +556,8 @@ footer {
             transform: translate(0, 0);
   }
   to {
-    -webkit-transform: translate(100%, 100%);
-            transform: translate(100%, 100%);
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
   }
 }
 @keyframes slide {
@@ -569,8 +566,8 @@ footer {
             transform: translate(0, 0);
   }
   to {
-    -webkit-transform: translate(100%, 100%);
-            transform: translate(100%, 100%);
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
   }
 }
 
