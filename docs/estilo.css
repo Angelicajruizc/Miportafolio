@@ -80,6 +80,7 @@ p {
   margin: auto;
   display: -ms-grid;
   display: grid;
+  overflow: hidden;
   -ms-grid-columns: 210px 120px;
       grid-template-columns: 210px 120px;
   -ms-grid-rows: 40px 200px 175px 195px 8.5% 9% 310px 23% 100px 58px;
@@ -211,18 +212,30 @@ p {
           align-items: center;
 }
 
-.tecnologias .fa-html5:hover, .tecnologias .fa-sass:hover, .tecnologias .fa-bootstrap:hover {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+.tecnologias .fa-html5, .tecnologias .fa-sass, .tecnologias .fa-bootstrap {
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
-.tecnologias .fa-css3:hover, .tecnologias .fa-git:hover {
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
-  -webkit-transition: all 0.5 linear;
-  transition: all 0.5 linear;
+.tecnologias .fa-css3, .tecnologias .fa-git {
+  -webkit-animation-name: scale2;
+          animation-name: scale2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .tecnologias h3 {
@@ -495,8 +508,8 @@ footer {
   width: 180px;
   height: 200px;
   position: absolute;
-  top: 31px;
-  left: -15px;
+  top: -169px;
+  left: -195px;
   margin: 0px;
   padding: 17px;
   background-image: linear-gradient(45deg, #b691b0 0%, #765075 100%);
@@ -527,5 +540,97 @@ footer {
 
 #desplegable:checked + #links-menu {
   display: block;
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+/*Inicio de Animaciones*/
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%);
+  }
+}
+@keyframes slide {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%);
+  }
+}
+
+@-webkit-keyframes scale1 {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  50% {
+    -webkit-transform: scale 0.7;
+            transform: scale 0.7;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale1 {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  50% {
+    -webkit-transform: scale 0.7;
+            transform: scale 0.7;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scale2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale 0.7;
+            transform: scale 0.7;
+  }
+  100% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale 0.7;
+            transform: scale 0.7;
+  }
+  100% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
 }
 /*# sourceMappingURL=estilo.css.map */
