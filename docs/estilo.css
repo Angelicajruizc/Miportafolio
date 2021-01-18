@@ -44,10 +44,9 @@ h1 {
 h2 {
   font-family: "Laila", sans-serif;
   color: #765075;
-  margin-top: 22px;
   font-weight: lighter;
   line-height: 30px;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   text-shadow: #ffffff -1px 2px 1px;
 }
 
@@ -114,26 +113,71 @@ p {
   background-size: 100%;
   background-position: left top;
   background-repeat: no-repeat;
-  text-align: right;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse wrap;
-          flex-flow: row-reverse wrap;
+  position: relative;
+  text-align: center;
+  padding: 25px 30px;
+}
+
+.encabezado #full {
+  position: absolute;
+  top: 85px;
+  right: -50px;
+  -webkit-animation-name: full;
+          animation-name: full;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.encabezado #stack {
+  position: absolute;
+  top: 115px;
+  right: -74px;
+  -webkit-animation-name: stack;
+          animation-name: stack;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.encabezado #dvlp {
+  position: absolute;
+  top: 145px;
+  right: -130px;
+  -webkit-animation-name: dvlp;
+          animation-name: dvlp;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .encabezado .photo {
   width: 92px;
   height: 108px;
+  position: absolute;
+  top: 70px;
+  left: 30px;
   border-radius: 10px;
   border: solid 2px #ffe0d1;
-  margin: 18px 20px 0 0;
 }
 
 .perfil {
@@ -676,6 +720,108 @@ footer {
   100% {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+  }
+}
+
+@-webkit-keyframes full {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-150px, 0);
+            transform: translate(-150px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-75px, 0);
+            transform: translate(-75px, 0);
+  }
+}
+
+@keyframes full {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-150px, 0);
+            transform: translate(-150px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-75px, 0);
+            transform: translate(-75px, 0);
+  }
+}
+
+@-webkit-keyframes stack {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-180px, 0);
+            transform: translate(-180px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+  }
+}
+
+@keyframes stack {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-180px, 0);
+            transform: translate(-180px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+  }
+}
+
+@-webkit-keyframes dvlp {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-195px, 0);
+            transform: translate(-195px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-153px, 0);
+            transform: translate(-153px, 0);
+  }
+}
+
+@keyframes dvlp {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-195px, 0);
+            transform: translate(-195px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-153px, 0);
+            transform: translate(-153px, 0);
   }
 }
 /*# sourceMappingURL=estilo.css.map */

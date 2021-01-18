@@ -39,10 +39,9 @@ h1 {
 h2 {
   font-family: $font-famy-h2;
   color: $color-h2;
-  margin-top: 22px;
   font-weight: lighter;
   line-height: 30px;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   text-shadow: #ffffff -1px 2px 1px;}
 h3 {
   font-family: $font-famy-h3;
@@ -97,18 +96,43 @@ p {
     background-image: url('hoja-holo.jpg');
     background-size: 100%; background-position: left top;
     background-repeat: no-repeat;
-    text-align: right;
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-    flex-flow: row-reverse wrap;
+    position: relative;
+    text-align: center;
+    padding: 25px 30px;
+    #full {
+      position: absolute; top: 85px; right: -50px;
+      animation-name: full;
+      animation-delay: 2s;
+      animation-duration: 1.1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+    #stack {
+      position: absolute; top: 115px; right: -74px;
+      animation-name: stack;
+      animation-duration: 1.1s;
+      animation-delay: 2.1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+    #dvlp {
+      position: absolute; top: 145px; right: -130px;
+      animation-name: dvlp;
+      animation-duration: 1.1s;
+      animation-delay: 2.2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
     
     .photo {
       width: 92px;
       height: 108px;
+      position: absolute; top: 70px; left: 30px;
       border-radius: 10px;
       border: solid 2px $background-rosa;
-      margin: 18px 20px 0 0;}}
+}}
 
 .perfil, .experiencia {
   @extend %lila1;} .hobbies, .redes {@extend %lila2;}
@@ -391,8 +415,7 @@ footer {
     border-radius: 70%;}
       to {
     transform: translate(100%, 0);
-    border-radius: none;}
-      }
+    border-radius: none;}}
 
     @keyframes not-checked-slide {
       from {
@@ -408,7 +431,7 @@ footer {
       50% {
     transform: scale (0.7);}
       100%{
-      transform: scale(1);}
+    transform: scale(1);}
     }
 
     @keyframes scale2 {
@@ -417,7 +440,40 @@ footer {
       50% {
     transform: scale (0.7);}
       100%{
-      transform: scale(0.4);}
+    transform: scale(0.4);}
     }
+
+    @keyframes full {
+      0% {
+    transform: translate(0, 0);
+    transform: skew(15deg);}
+      50% {
+    transform: translate(-150px, 0);}    
+      100%{
+    transform: translate(-75px, 0);}}
+
+    @keyframes stack {
+      0% {
+    transform: translate(0, 0);
+    transform: skew(15deg);}
+      50% {
+    transform: translate(-180px, 0);}    
+      100%{
+    transform: translate(-100px, 0);}
+    }
+
+    @keyframes dvlp {
+      0% {
+    transform: translate(0, 0);
+    transform: skew(15deg);}
+      50% {
+    transform: translate(-195px, 0);}    
+      100%{
+    transform: translate(-153px, 0);}
+    }
+    
+    
+
+   
 
 
