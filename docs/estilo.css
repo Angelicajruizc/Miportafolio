@@ -74,15 +74,17 @@ p {
 .grid-container {
   max-width: 330px;
   width: 100%;
-  height: 296vh;
-  margin: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
   overflow: hidden;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 210px 120px;
-      grid-template-columns: 210px 120px;
-  -ms-grid-rows: 40px 200px 175px 195px 8.5% 8.5% 310px 23% 95px 70px;
-      grid-template-rows: 40px 200px 175px 195px 8.5% 8.5% 310px 23% 95px 70px;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  -ms-grid-rows: 40px 200px 175px 196px 8.5% 8.5% 310px 23% 95px 65px;
+      grid-template-rows: 40px 200px 175px 196px 8.5% 8.5% 310px 23% 95px 65px;
       grid-template-areas: "nav nav" "header header" "perfil perfil" "info-p info-p" "hobbies hobbies" "tecno tecno" "expe expe" "contacto contacto" "redes redes" "footer footer";
 }
 
@@ -434,6 +436,7 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: footer;
+  padding: 15px;
   background-color: #ffe0d1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,9 +444,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .grid-container .menu-h {
