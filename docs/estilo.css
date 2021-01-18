@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rambla:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Laila&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
-.info-personal, .tecnologias, .contact-form {
+.tecnologias, .contact-form {
   background-image: url("hoja-holo-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,17 +74,14 @@ p {
 .grid-container {
   max-width: 330px;
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   margin: 0 auto;
   overflow: hidden;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  -ms-grid-rows: 40px 200px 175px 196px 8.5% 8.5% 310px 23% 95px 65px;
-      grid-template-rows: 40px 200px 175px 196px 8.5% 8.5% 310px 23% 95px 65px;
+  -ms-grid-columns: (minmax(130px, 170) 1fr)[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 170) 1fr);
+  -ms-grid-rows: 40px 200px 175px 196px 155px auto 310px auto 95px 55px;
+      grid-template-rows: 40px 200px 175px 196px 155px auto 310px auto 95px 55px;
       grid-template-areas: "nav nav" "header header" "perfil perfil" "info-p info-p" "hobbies hobbies" "tecno tecno" "expe expe" "contacto contacto" "redes redes" "footer footer";
 }
 
@@ -158,6 +155,7 @@ p {
   -ms-grid-column-span: 2;
   grid-area: info-p;
   padding: 20px 28px;
+  background-color: #ffe0d1;
 }
 
 .info-personal p {
@@ -200,6 +198,7 @@ p {
   background-color: #765075a2;
   width: 58px;
   height: 60px;
+  margin-top: 7px;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +316,7 @@ p {
   background-color: #ffe0d1;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .contact-form {
@@ -341,20 +340,19 @@ p {
 }
 
 .contact-form input, .contact-form label {
-  font-family: "Yusei Magic", sans-serif;
   margin: 4px 15px;
   padding: 5px;
 }
 
 .contact-form input[type="text"], .contact-form [type="email"], .contact-form [type="tel"] {
   width: 215px;
-  height: 24px;
+  height: 25px;
   background: #ffffffc2;
   border: none;
   border-radius: 10px;
   padding-left: 15px;
   outline: none;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .contact-form input[type="text"]:focus, .contact-form input[type="text"]:active, .contact-form [type="email"]:focus, .contact-form [type="email"]:active, .contact-form [type="tel"]:focus, .contact-form [type="tel"]:active {
@@ -365,12 +363,13 @@ p {
 
 .contact-form #comentario {
   width: 215px;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 12px;
   background: #ffffffc2;
   border: none;
   border-radius: 10px;
-  padding-left: 15px;
+  padding: 5px 15px 5px 15px;
   outline: none;
-  font-size: 14px;
   margin: 4px 15px;
 }
 
@@ -444,9 +443,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .grid-container .menu-h {
@@ -540,10 +539,10 @@ footer {
 
 #desplegable:checked + #links-menu {
   display: block;
-  -webkit-animation-name: slide;
-          animation-name: slide;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-name: checked-slide;
+          animation-name: checked-slide;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
@@ -552,25 +551,71 @@ footer {
           animation-timing-function: ease;
 }
 
+#desplegable:not(:checked) + #links-menu {
+  display: block;
+  -webkit-animation-name: not-checked-slide;
+          animation-name: not-checked-slide;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
 /*Inicio de Animaciones*/
-@-webkit-keyframes slide {
+@-webkit-keyframes checked-slide {
   from {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    border-radius: 70%;
   }
   to {
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
+    border-radius: none;
   }
 }
-@keyframes slide {
+@keyframes checked-slide {
   from {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    border-radius: 70%;
   }
   to {
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
+    border-radius: none;
+  }
+}
+
+@-webkit-keyframes not-checked-slide {
+  from {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+    border-radius: none;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    border-radius: 60%;
+  }
+}
+
+@keyframes not-checked-slide {
+  from {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+    border-radius: none;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    border-radius: 60%;
   }
 }
 

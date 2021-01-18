@@ -64,12 +64,11 @@ p {
 .grid-container {
   max-width: 330px;
   width: 100%;
-  height: max-content;
   margin: 0 auto;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  grid-template-rows: 40px 200px 175px 196px 8.5% 8.5% 310px 23% 95px 65px;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 170) 1fr);
+  grid-template-rows: 40px 200px 175px 196px 155px auto 310px auto 95px 55px;
   grid-template-areas: "nav nav"
                       "header header"
                       "perfil perfil"
@@ -114,7 +113,7 @@ p {
 .perfil, .experiencia {
   @extend %lila1;} .hobbies, .redes {@extend %lila2;}
  
-.info-personal, .tecnologias, .contact-form {@extend %rosa;}
+.tecnologias, .contact-form {@extend %rosa;}
 
 .perfil {
   grid-area: perfil;
@@ -127,6 +126,7 @@ padding: 20px 30px 20px 20px;
 .info-personal {
     grid-area: info-p;
     padding: 20px 28px;
+    background-color: $background-rosa;
     
     p {
       margin:-7px;
@@ -151,6 +151,7 @@ padding: 20px 30px 20px 20px;
     background-color: #765075a2;
     width: 58px;
     height: 60px;
+    margin-top: 7px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -219,7 +220,7 @@ padding: 20px 30px 20px 20px;
           background-color: $background-rosa;
           border-radius: 6px;
           font-weight: bold;
-          font-size: 1rem; }}}
+          font-size: 1.2rem; }}}
 
 .contact-form {
   grid-area: contacto;
@@ -235,31 +236,31 @@ padding: 20px 30px 20px 20px;
       margin: auto;}
     
     input, label {
-      font-family: $font-famy-p;
       margin: 4px 15px;
       padding: 5px ;}
 
     input[type="text"], [type="email"], [type="tel"] {
       width: 215px;
-      height: 24px;
+      height: 25px;
       background: #ffffffc2;
       border: none;
       border-radius: 10px;
       padding-left: 15px;
       outline: none;
-      font-size: 14px;
+      font-size: 12px;
         &:focus, &:active {
           background-color: #ffffff;
           box-shadow: 0 0 1px 1.5px $background-rosa;}} 
 
     #comentario {
       width: 215px;
+      font-family: $font-famy-p;
+      font-size: 12px;
       background: #ffffffc2;
       border: none;
       border-radius: 10px;
-      padding-left: 15px;
+      padding: 5px 15px 5px 15px;
       outline: none;
-      font-size: 14px; 
       margin: 4px 15px;;
       &:focus, &:active {
         background-color: #ffffff;
@@ -301,7 +302,7 @@ footer {
     background-color: $background-rosa;
     display: flex;
     justify-content: center;
-    align-items: flex-start;}
+    align-items: center;}
 
 .grid-container .menu-h {
   width: 26px;
@@ -368,19 +369,38 @@ footer {
   
   #desplegable:checked + #links-menu {
     display: block;
-    animation-name: slide;
-    animation-duration: 1.5s;
+    animation-name: checked-slide;
+    animation-duration: 1.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: ease;}
+  
+    #desplegable:not(:checked) + #links-menu {
+    display: block;
+    animation-name: not-checked-slide;
+    animation-duration: 1.3s;
+    animation-iteration-count: 1;
+    animation-play-state:running;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;}
 
     /*Inicio de Animaciones*/
-    @keyframes slide {
+    @keyframes checked-slide {
       from {
-    transform: translate(0, 0);}
+    transform: translate(0, 0);
+    border-radius: 70%;}
       to {
-    transform: translate(100%, 0);}
+    transform: translate(100%, 0);
+    border-radius: none;}
       }
+
+    @keyframes not-checked-slide {
+      from {
+    transform: translate(100%, 0);
+    border-radius: none;}
+      to {
+    transform: translate(0, 0);
+    border-radius: 60%;}}
 
     @keyframes scale1 {
       0% {
